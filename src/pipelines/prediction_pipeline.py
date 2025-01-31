@@ -76,39 +76,39 @@ class CustomData:
             raise customexception(e, sys)
 
 
-if __name__ == "__main__":
-    try:
-        # Example: Predicting a custom data sample
-        custom_data = CustomData(
-            store_area=1650,
-            items_available=1850,
-            daily_customer_count=500
-        )
+# if __name__ == "__main__":
+#     try:
+#         # Example: Predicting a custom data sample
+#         # custom_data = CustomData(
+#         #     store_area=1650,
+#         #     items_available=1850,
+#         #     daily_customer_count=500
+#         # )
 
-        # Get the data as a dataframe
-        df = custom_data.get_data_as_dataframe()
+#         # # Get the data as a dataframe
+#         # df = custom_data.get_data_as_dataframe()
 
-        # Assuming target (Store_Sales) is known for comparison
-        target = [50000]  
+#         # # Assuming target (Store_Sales) is known for comparison
+#         # target = [50000]  
 
-        # Initialize the prediction pipeline and get prediction
-        predict_pipeline = PredictPipeline()
-        prediction = predict_pipeline.predict(df, target)
+#         # # Initialize the prediction pipeline and get prediction
+#         # predict_pipeline = PredictPipeline()
+#         # prediction = predict_pipeline.predict(df, target)
 
-        # Output the prediction result
-        print(f"Predicted Store Sales: {prediction[0]}")
-
-
-        actual_value = 66490
-        predicted_value = 70629.79985872863
-
-        # Calculate the error and percentage error
-        error = abs(actual_value - predicted_value)
-        percentage_error = (error / actual_value) * 100
-
-        print(f"Error: {error}")
-        print(f"Percentage Error: {percentage_error:.2f}%")
+#         # # Output the prediction result
+#         # print(f"Predicted Store Sales: {prediction[0]}")
 
 
-    except Exception as e:
-        logging.error(f"Error in executing the prediction pipeline: {e}")
+#         # actual_value = 66490
+#         # predicted_value = 70629.79985872863
+
+#         # Calculate the error and percentage error
+#         # error = abs(actual_value - predicted_value)
+#         # percentage_error = (error / actual_value) * 100
+
+#         # print(f"Error: {error}")
+#         # print(f"Percentage Error: {percentage_error:.2f}%")
+
+
+#     except Exception as e:
+#         logging.error(f"Error in executing the prediction pipeline: {e}")
