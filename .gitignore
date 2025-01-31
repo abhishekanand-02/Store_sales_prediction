@@ -1,0 +1,23 @@
+# Ignore DVC-related files that are not required to be in Git
+.dvc/
+
+# Allow .dvc files to be tracked by Git
+!*.dvc
+
+# Ignore Python virtual environment folder
+env/
+
+# Ignore logs, experiment results, and any local run data
+logs/
+mlruns/
+
+# Ignore system or IDE-specific files (optional but recommended)
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore temporary or backup files
+*.bak
+*.swp
+
